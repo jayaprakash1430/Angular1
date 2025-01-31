@@ -1,0 +1,83 @@
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+    color: rgb(116, 116, 212);
+  }
+.data {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .data form {
+    border: 1px solid #ddd;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .data h1 {
+    color: #333;
+  }
+  
+  .data input, .data select, .data button {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+  }
+  .data select, .data button {
+    width: 84%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+  }
+  
+  .data input:focus, .data select:focus, .data button:focus {
+    outline: none;
+    border-color: #4CAF50;
+  }
+  
+
+  .data .ng-invalid.ng-touched {
+    border-color: red;
+  }
+  
+  .data .ng-valid.ng-touched {
+    border-color: green;
+  }
+  
+  .data button {
+      background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.data button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.data button:hover {
+    background-color: #45a049;
+}
+  

@@ -1,0 +1,42 @@
+<div>
+    <nav>
+        <a routerLink='/register' >Register</a>
+        <a routerLink='/login'>login</a>
+        <a routerLink='/output'>Output</a>
+        <a routerLink='/store'>Store</a>
+    </nav>
+</div>
+<div class="data" id="Register">
+    <form (ngSubmit)="clickme()" #registerForm="ngForm">
+      <h1>Register</h1>
+      <input type="text" placeholder="Username" [(ngModel)]="user.name" name="name" required><br>
+      <input type="email" placeholder="Email" [(ngModel)]="user.email" name="email" required email #email="ngModel"><br>
+      <div *ngIf="email.invalid && email.touched" style="color: red;">Invalid email format</div>
+      <input type="password" placeholder="Password" minlength="6" [(ngModel)]="user.password" name="password" required #password="ngModel"><br>
+      <div *ngIf="password.invalid && password.touched" style="color: red;">Password must be at least 6 characters long</div>
+      <select name="select" [(ngModel)]="user.option">
+        <option value="male" disabled>select one</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select><br>
+      <input type="number" placeholder="Mobile No" [(ngModel)]="user.number" name="number" required>
+      <input type="number" placeholder="Enter OTP" required ><br>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

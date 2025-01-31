@@ -1,0 +1,43 @@
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+    color: rgb(116, 116, 212);
+  }
+  
+ .user-data table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  
+  .user-data th, .user-data td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .user-data th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .user-data td {
+    background-color: #f9f9f9;
+  }
+  
+  .user-data td:hover {
+    background-color: #f1f1f1;
+  }
+  

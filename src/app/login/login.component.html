@@ -1,0 +1,17 @@
+<div>
+    <nav>
+        <a routerLink='/register' >Register</a>
+        <a routerLink='/login'>login</a>
+        <a routerLink='/output'>Output</a>
+        <a routerLink='/store'>Store</a>
+    </nav>
+</div>
+<div class="class" id="Login">
+    <form (ngSubmit)="login()">
+      <h1>Login</h1>
+      <input type="email" placeholder="Email" [(ngModel)]="loginUser.email" name="email" required><br>
+      <input type="password" placeholder="Password" [(ngModel)]="loginUser.password" name="password" required><br>
+      <button type="submit">Login</button>
+      <button (click)="register()" >Register</button>
+    </form>
+  </div>

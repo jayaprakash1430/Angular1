@@ -1,0 +1,84 @@
+<!--<div>
+  <nav>
+    <a >Home</a>
+    <a href="./about">About</a>
+    <a href="./login">Login</a>
+    <a href="/register">Register</a>
+    <a href="./app.component.html/user-data">User data</a>
+  </nav>
+</div>
+
+<div class="data" id="Register">
+  <form (ngSubmit)="clickme()" #registerForm="ngForm">
+    <h1>{{ isEditing ? 'Edit' : 'Register' }} Form</h1>
+    <input type="text" placeholder="Username" [(ngModel)]="user.name" name="name" required><br>
+    <input type="email" placeholder="Email" [(ngModel)]="user.email" name="email" required email #email="ngModel"><br>
+    <div *ngIf="email.invalid && email.touched" style="color: red;">Invalid email format</div>
+    <input type="password" placeholder="Password" minlength="6" [(ngModel)]="user.password" name="password" required #password="ngModel"><br>
+    <div *ngIf="password.invalid && password.touched" style="color: red;">Password must be at least 6 characters long</div>
+    <select name="select" [(ngModel)]="user.option">
+      <option value="male" disabled>select one</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select><br>
+    <input type="number" placeholder="Mobile No" [(ngModel)]="user.number" name="number" required>
+    <input type="number" placeholder="Enter OTP" required ><br>
+    <button type="submit">{{ isEditing ? 'Update' : 'Register' }}</button>
+  </form>
+</div><hr>
+
+<div *ngIf="isLoggedIn1" class="class" id="Login">
+  <form (ngSubmit)="login()">
+    <h1>Login</h1>
+    <input type="email" placeholder="Email" [(ngModel)]="loginUser.email" name="email" required><br>
+    <input type="password" placeholder="Password" [(ngModel)]="loginUser.password" name="password" required><br>
+    <button type="submit">Login</button>
+  </form>
+</div>
+
+<div *ngIf="isLoggedIn" class="welcome-message">
+  <h1>Welcome</h1>
+    Hello! {{user.name}}<br>
+    Welcome to your {{user.email}} <br>
+    Thank you for logging in! <br>
+</div>
+
+<hr>
+
+<h1 style="text-align: center; color: green;">Users Data</h1>
+<div id="user-data" class="user-data">
+  <table *ngIf="datas.length > 0" cellpadding="10">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Gender</th>
+        <th>Mobile</th>
+        <th>Delete</th>
+        <th>Update</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of datas; let i = index">
+        @if(i<9)
+        {
+          <td><b>0{{ i + 1 }}.</b></td>
+        }
+        @else {
+          <td><b>{{ i + 1 }}.</b></td>
+        }
+       
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.password }}</td>
+        <td>{{ user.option }}</td>
+        <td>{{ user.number }}</td>
+        <td><button class="Delete" (click)="deleteRow(user)"><b>X</b></button></td>
+        <td><button class="Update" (click)="editUser(user)">^</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>-->
+<router-outlet></router-outlet>

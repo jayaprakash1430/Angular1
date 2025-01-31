@@ -1,0 +1,41 @@
+<div>
+    <nav>
+        <a routerLink='/register' >Register</a>
+        <a routerLink='/login'>login</a>
+        <a routerLink='/output'>Output</a>
+        <a routerLink='/store'>Store</a>
+    </nav>
+</div>
+<h1 style="text-align: center; color: green;">Users Data</h1>
+<div id="user-data" class="user-data">
+  <table *ngIf="datas.length > 0" cellpadding="10">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Gender</th>
+        <th>Mobile</th>
+        <th>Delete</th>
+        <th>Update</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of datas; let i = index">
+        <td><b>{{ i < 9 ? '0' + (i + 1) : i + 1 }}.</b></td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.password }}</td>
+        <td>{{ user.option }}</td>
+        <td>{{ user.number }}</td>
+        <td><button class="Delete" (click)="deleteRow(i)"><b>X</b></button></td>
+        <td><button class="Update" (click)="editUser(i)"><b>^</b></button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="datas.length === 0">
+    <p>No users available.</p>
+  </div>
+</div>
